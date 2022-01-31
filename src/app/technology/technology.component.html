@@ -1,0 +1,33 @@
+<h5 class="technology-section__heading"><span>03</span> Space launch 101</h5>
+<div class="technology-section">
+    <div class="info">
+        <div class="info__wrapper">
+            <div class="slider">
+                <div class="slider__item" 
+                    *ngFor="let tech of technologyList; 
+                    let i = index"
+                    (click) = "changeCurrent(i)"
+                    [ngClass]="{'active':(currentTech === technologyList[i])}"
+                    >
+                    <p>{{i+1}}</p>
+                </div>
+            </div>
+            <div class="text">
+                <h6 class="text__subheading">The Terminology...</h6>
+                <h3 class="text__name">{{currentTech.name}}</h3>
+                <p class="text__description">{{currentTech.description}}</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="tech_img">
+        <picture>
+            <source media="(max-width: 1024px)" srcset="{{currentTech.images.landscape}}">
+            <img src="{{currentTech.images.portrait}}" alt="">
+        </picture>
+        
+    </div>
+
+
+</div>

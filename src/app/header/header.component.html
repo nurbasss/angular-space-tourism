@@ -1,0 +1,30 @@
+<header class="header_section">
+    <div class="header_section__logo">
+        <img src="../../assets/shared/logo.svg" alt="">
+    </div>
+    
+    <label role="button" 
+        class="header_section__menu_btn" 
+        (click)="toggleMenu()"
+        aria-controls="navbar"
+        aria-expanded="false">
+        <!-- <span aria-hidden="true">Menu</span> -->
+        <img src="{{menuIcon}}" alt="menu">
+    </label>
+
+    <nav class="navbar" 
+        [ngClass]="{'visible':show}" (click)="toggleMenu()">
+        <div class="navbar__item">
+            <a routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"><span>00</span> Home</a>
+        </div>
+        <div class="navbar__item">
+            <a routerLink="destination" routerLinkActive="active-link"><span>01</span> Destination</a>
+        </div>
+        <div class="navbar__item">
+            <a routerLink="crew" routerLinkActive="active-link"><span>02</span> Crew</a>
+        </div>
+        <div class="navbar__item">
+            <a routerLink="technology" routerLinkActive="active-link"><span>03</span> Technology</a>
+        </div>
+    </nav>
+</header>

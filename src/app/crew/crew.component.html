@@ -1,0 +1,26 @@
+
+<h5><span>02</span> Meet your crew</h5>
+
+<div class="crew_section">
+    
+    <div class="info">
+        <div class="info__text">
+            <h4>{{currentCrew.role}}</h4>
+            <h3>{{currentCrew.name}}</h3>
+            <p>{{currentCrew.bio}}</p>
+        </div>
+
+        <div class="info__slider">
+            <span *ngFor="let crew of crewList; let i = index" 
+                (click) = "changeCurrent(i)" 
+                [ngClass]="{'active': currentCrew === crew}" 
+                class="info__slider-dot"
+                >
+            </span>
+        </div>    
+    </div>
+
+    <div class="crew_section__img">
+        <img src="{{currentCrew.images.png}}" alt="">
+    </div>
+</div>

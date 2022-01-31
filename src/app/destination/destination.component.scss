@@ -1,0 +1,225 @@
+@import '../../variables.scss';
+
+h5{
+    font-family: $font-Barlow;
+    color: $white-color;
+    font-size: 28px;
+    letter-spacing: 4.72;
+    margin-left: 10%;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 80px;
+
+
+    span{
+        font-weight: bold;
+        opacity: 0.25;
+        line-height: 32px;
+        margin-right: 20px;
+    }
+}
+
+.destination_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    
+
+    &__img{
+        width: 350px;
+        align-self: flex-end;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.info{
+
+    width: 470px;
+    transition: 0.35s ease 0s;
+
+    &__header{
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        
+        h6{
+            color: $light-text-color;
+            font-family: $font-Barlow;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 2.7;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+        }
+
+        ::after{
+            background-color: $white-color;
+            content: "";
+            width: 0;
+            opacity: 0.5;
+            height: 1px;
+            left: 0;
+            bottom: -10px;
+            transition: width 0.35s ease 0s;
+            position: absolute;
+        }
+
+        :hover::after{
+            width: 100%;
+        }
+
+        .active::after{
+            width: 100% !important;
+            opacity: 1;
+        }
+    }
+
+    &__text{
+        margin-top: 34px;
+
+        h2{
+            color: $white-color;
+            font-family: $font-Bellefair;
+            font-size: 100px;
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 114px;
+        }
+
+        p{
+            color: $light-text-color;
+            font-family: $font-Barlow;
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: normal;
+        }
+    }
+
+    hr{
+        height: 1px;
+        color: $white-color;
+        border: none;
+        background-color: $light-text-color;
+        margin: 54px 0 28px;
+    }
+
+    &__travel{
+        display: flex;
+        flex-direction: row;
+        text-transform: uppercase;
+            
+        h6{
+            color: $light-text-color;
+            font-family: $font-Barlow;
+            font-size: 14px;
+            letter-spacing: 2.35;
+            font-weight: normal;
+        }
+
+        p{
+            font-family: $font-Bellefair;
+            color: $white-color;
+            font-size: 28px;
+            font-weight: normal;
+        }
+
+        &-distance{
+            margin-right: 80px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .destination_section{
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+
+        &__img{
+            align-self: center;
+        }
+
+    }
+    .info{
+        margin-top: 54px;
+
+        &__header, &__travel{
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    
+    h5{
+        font-size: 16px;
+        letter-spacing: 2.7;
+        margin-top: 0px;
+
+        span{
+            line-height: 20px;
+        }
+    }
+    
+    .destination_section{
+        margin-top: 24px ;
+
+        &__img{
+            width: 170px;
+        }
+    }
+    
+    .info{
+        width: 320px;    
+
+        &__header{
+            gap: 26px;
+            
+            h6{
+                font-size: 14px;
+                letter-spacing: 2.36;
+            }
+        }
+    
+        &__text{
+            margin-top: 20px;
+    
+            h2{
+                font-size: 56px;
+                line-height: 64px;
+            }
+    
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    
+        hr{
+            height: 1px;
+            color: $white-color;
+            border: none;
+            background-color: $light-text-color;
+            margin: 32px 0 32px;
+        }
+    
+        &__travel{
+            flex-direction: column;
+            gap: 32px;
+    
+            &-distance{
+                margin-right: 0px;
+            }
+    
+        }
+    }
+}

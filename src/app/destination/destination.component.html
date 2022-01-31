@@ -1,0 +1,43 @@
+
+<h5><span>01</span> Pick your destination</h5>
+
+<div class="destination_section">
+    <div class="destination_section__img">
+        <img src="{{currentDestination.images.png}}" alt="">
+    </div>
+
+    <div class="info">
+        <div class="info__header">
+            <h6 *ngFor="let destination of destinations; let i = index" (click) = "changeCurrent(i)" [ngClass]="{'active': currentDestination === destination}">
+                {{destination.name}}
+            </h6>
+        </div>
+
+        <div class="info__text">
+            <h2>{{currentDestination.name}}</h2>
+            <p>{{currentDestination.description}}</p>
+        </div>
+
+        <hr>
+
+        <div class="info__travel">
+            <div class="info__travel-distance">
+                <h6 class="subheading-2">
+                    Avg. distance
+                </h6>
+                <p>
+                    {{currentDestination.distance}}
+                </p>
+            </div>
+            <div class="info__travel-time">
+                <h6 class="subheading-2">
+                    Est. travel time
+                </h6>
+                <p>
+                    {{currentDestination.travel}}
+                </p>
+            </div>
+        </div>
+        
+    </div>
+</div>
