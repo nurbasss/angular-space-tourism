@@ -1,3 +1,7 @@
+# AboutProject
+
+Project was made on Angular, so during work I learned Angular animations and routing, also this app is adaptive.
+
 # SpaceTourism
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
