@@ -1,6 +1,7 @@
 # AboutProject
+Link to Demo -- https://keen-jones-dd0719.netlify.app/
 
-Project was made on Angular, so during work I learned Angular animations and routing, also this app is adaptive.
+Project was made on Angular, so during work I learned Angular animations and routing, also I tried to make it adaptive.
 
 # SpaceTourism
 
